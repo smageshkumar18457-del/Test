@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+class Person {
+private:
+    string name;
+
+public:
+    void setName(string n) {
+        name = n;
+    }
+
+    string getName() {
+        return name;
+    }
+};
+
+class Student : public Person {
+public:
+    void display() {
+        cout << "Name: " << getName();
+    }
+};
+
+int main() {
+    Student s;
+    s.setName("Magesh");
+    s.display();
+}
