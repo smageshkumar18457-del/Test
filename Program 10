@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+class Employee {
+private:
+    int salary;
+
+public:
+    void setSalary(int s) {
+        salary = s;
+    }
+
+protected:
+    int getSalary() {
+        return salary;
+    }
+};
+
+class Manager : public Employee {
+public:
+    void display() {
+        cout << "Manager Salary: " << getSalary();
+    }
+};
+
+int main() {
+    Manager m;
+    m.setSalary(30000);
+    m.display();
+}
