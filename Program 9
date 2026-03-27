@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+class Account {
+private:
+    int balance;
+
+public:
+    void setBalance(int b) {
+        balance = b;
+    }
+
+protected:
+    int getBalance() {
+        return balance;
+    }
+};
+
+class Savings : public Account {
+public:
+    void showBalance() {
+        cout << "Balance: " << getBalance();
+    }
+};
+
+int main() {
+    Savings s;
+    s.setBalance(5000);
+    s.showBalance();
+}
