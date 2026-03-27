@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+class Shape {
+public:
+    void info() {
+        cout << "This is a shape\n";
+    }
+};
+
+class Circle : public Shape {
+public:
+    void draw() {
+        cout << "Drawing Circle\n";
+    }
+};
+
+class Square : public Shape {
+public:
+    void draw() {
+        cout << "Drawing Square\n";
+    }
+};
+
+int main() {
+    Circle c;
+    Square s;
+
+    c.info();
+    c.draw();
+
+    s.info();
+    s.draw();
+}
